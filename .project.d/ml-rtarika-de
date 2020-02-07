@@ -1,0 +1,32 @@
+---
+name: ml-rtarika-de
+description: GCP ml-rtarika developer account 
+tfvars:
+  # dd_enable: 0
+  gcp_project_id: "ml-rtarika"
+
+  # network configuration
+  vpc_network: "tss-vpc-pr"
+  vpc_subnetwork: "ml-tvu"
+  vpc_subnetwork_cidr_range: "10.2.0.0/24"
+  primary_network_region: "us-east1"
+  primary_network_zone: "us-east1-d"
+  secondary_network_zone: "us-east1-c"
+
+  # Cloudera
+  cloudera_machine_type: "n1-standard-16"
+  cloudera_machine_image: "rhel-cloud/rhel-7"
+  cloudera_network_tag: "cloudera"
+  cloudera_master_node_count: 2
+  cloudera_worker_node_count: 4
+  cloudera_master_boot_disk_size_gb: 50
+  cloudera_master_grid_disk_size_gb: 100
+  cloudera_worker_boot_disk_size_gb: 50
+  cloudera_worker_grid_disk_size_gb: 100
+
+  # Zaloni
+  zaloni_machine_type: "n1-standard-16"
+  zaloni_machine_image: "rhel-cloud/rhel-7"
+  zaloni_network_tag: "zaloni"
+  zaloni_boot_disk_size_gb: 25
+  zaloni_opt_disk_size_gb: 50
